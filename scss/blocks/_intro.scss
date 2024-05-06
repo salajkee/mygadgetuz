@@ -1,6 +1,6 @@
 .intro {
 	width: 100%;
-	min-height: 900px;
+	min-height: 850px;
 	overflow: hidden;
 	position: relative;
 
@@ -35,24 +35,6 @@
 	&__btn {
 		margin-top: 30px;
 		width: 320px;
-	}
-}
-
-@media (max-width: 1920px) {
-	.intro {
-		min-height: 700px;
-
-		&__wrapper {
-			padding-top: 220px;
-		}
-
-		&__title {
-			font-size: 42px;
-		}
-
-		&__subtitle {
-			font-size: 22px;
-		}
 	}
 }
 

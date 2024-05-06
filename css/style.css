@@ -416,7 +416,7 @@ body {
 }
 .intro {
   width: 100%;
-  min-height: 900px;
+  min-height: 850px;
   overflow: hidden;
   position: relative;
 }
@@ -450,20 +450,6 @@ body {
   width: 320px;
 }
 
-@media (max-width: 1920px) {
-  .intro {
-    min-height: 700px;
-  }
-  .intro__wrapper {
-    padding-top: 220px;
-  }
-  .intro__title {
-    font-size: 42px;
-  }
-  .intro__subtitle {
-    font-size: 22px;
-  }
-}
 @media (max-width: 1440px) {
   .intro {
     min-height: 600px;
