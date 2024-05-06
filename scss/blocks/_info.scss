@@ -1,0 +1,29 @@
+.info {
+	padding: 70px 0 35px;
+
+	&__wrapper {
+		padding: 30px;
+		border: 1px solid var(--primary);
+		border-radius: 5px;
+	}
+
+	&__text {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 1.5;
+		color: var(--text);
+		text-align: center;
+	}
+}
+
+@media (max-width: 768px) {
+	.info {
+		&__wrapper {
+			padding: 20px;
+		}
+
+		&__text {
+			font-size: 16px;
+		}
+	}
+}

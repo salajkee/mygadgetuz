@@ -1,0 +1,163 @@
+.conditions {
+	padding: 70px 0 0;
+
+	&__title {
+		text-align: center;
+	}
+
+	&__subtitle {
+		max-width: 800px;
+		margin: 10px auto 0;
+		font-weight: 500;
+		font-size: 16px;
+		color: var(--text);
+		text-align: center;
+	}
+
+	&__items {
+		margin-top: 40px;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 20px;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&-num {
+			width: 75px;
+			height: 75px;
+			font-size: 16px;
+			font-weight: 500;
+			color: var(--white);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			background-color: var(--primary);
+		}
+
+		&-text {
+			margin-top: 10px;
+			font-size: 16px;
+			line-height: 1.5;
+			color: var(--text);
+			text-align: center;
+		}
+	}
+
+	.table {
+		margin-top: 40px;
+
+		&__head {
+			display: grid;
+			grid-template-columns: 500px auto;
+			background-color: var(--gray);
+
+			&-item {
+				padding: 20px;
+				font-size: 16px;
+				line-height: 1.5;
+				color: var(--text);
+				text-align: center;
+			}
+		}
+
+		&__body {
+			display: grid;
+			grid-template-columns: 500px auto;
+
+			&:nth-child(even) {
+				background-color: var(--gray-light);
+			}
+
+			&-item {
+				padding: 25px 20px;
+				font-size: 16px;
+				line-height: 1.5;
+				color: var(--text);
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media (max-width: 1230px) {
+	.conditions {
+		.table {
+			&__head {
+				grid-template-columns: 40% 60%;
+			}
+
+			&__body {
+				grid-template-columns: 40% 60%;
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.conditions {
+		&__items {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		&__item {
+			&-text {
+				max-width: 300px;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.conditions {
+		&__item {
+			&-num {
+				width: 55px;
+				height: 55px;
+			}
+		}
+
+		.table {
+			&__head {
+				grid-template-columns: 40% 60%;
+
+				&-item {
+					padding: 15px 20px;
+					text-align: left;
+				}
+			}
+
+			&__body {
+				grid-template-columns: 40% 60%;
+
+				&-item {
+					padding: 15px 20px;
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 680px) {
+	.conditions {
+		overflow-y: hidden;
+
+		.table {
+			min-width: 650px;
+			overflow-y: scroll;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.conditions {
+		&__items {
+			grid-template-columns: 1fr;
+		}
+	}
+}
