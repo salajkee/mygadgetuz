@@ -47,18 +47,20 @@
 	}
 }
 
-.footer {
-	&__top {
-		flex-direction: column;
-		align-items: center;
-		row-gap: 20px;
-	}
+@media (max-width: 576px) {
+	.footer {
+		&__top {
+			flex-direction: column;
+			align-items: center;
+			row-gap: 20px;
+		}
 
-	&__contacts {
-		align-items: center;
-	}
+		&__contacts {
+			align-items: center;
+		}
 
-	&__bot {
-		margin-top: 20px;
+		&__bot {
+			margin-top: 20px;
+		}
 	}
 }

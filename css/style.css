@@ -1221,14 +1221,16 @@ body {
   color: var(--white);
 }
 
-.footer__top {
-  flex-direction: column;
-  align-items: center;
-  row-gap: 20px;
-}
-.footer__contacts {
-  align-items: center;
-}
-.footer__bot {
-  margin-top: 20px;
+@media (max-width: 576px) {
+  .footer__top {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+  }
+  .footer__contacts {
+    align-items: center;
+  }
+  .footer__bot {
+    margin-top: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
