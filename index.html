@@ -24,7 +24,9 @@
 								</ul>
 							</nav>
 							<a class="header__tel" href="tel:710000000">71 000-00-00</a>
-							<button class="header__btn btn">Заказать звонок</button>
+							<button class="header__btn btn" data-modal-cb>
+								Заказать звонок
+							</button>
 						</div>
 						<div class="hamburger">
 							<span></span>
@@ -113,25 +115,33 @@
 									<p class="protection__items-title">Что дает наш сертификат</p>
 									<ul class="protections__items-list list">
 										<li class="list__item">
-											<div class="list__item-icon"></div>
+											<div class="list__item-icon">
+												<img src="./images/protection/icon_1.svg" alt="icon" />
+											</div>
 											<p class="list__item-text">
 												Замена поврежденного устройства на новое!
 											</p>
 										</li>
 										<li class="list__item">
-											<div class="list__item-icon"></div>
+											<div class="list__item-icon">
+												<img src="./images/protection/icon_2.svg" alt="icon" />
+											</div>
 											<p class="list__item-text">
 												Покрытие случае, которые не входят в гарантию!
 											</p>
 										</li>
 										<li class="list__item">
-											<div class="list__item-icon"></div>
+											<div class="list__item-icon">
+												<img src="./images/protection/icon_3.svg" alt="icon" />
+											</div>
 											<p class="list__item-text">
 												Очень простое оформление сертификата
 											</p>
 										</li>
 										<li class="list__item">
-											<div class="list__item-icon"></div>
+											<div class="list__item-icon">
+												<img src="./images/protection/icon_4.svg" alt="icon" />
+											</div>
 											<p class="list__item-text">Простое оформление обмена</p>
 										</li>
 									</ul>
@@ -208,19 +218,19 @@
 				</section>
 
 				<section class="video">
-					<video
+					<!-- <video
 						src="./video/vid.mp4"
 						playsinline
 						autoplay
 						muted
 						loop
 						type="video/mp4"
-					></video>
+					></video> -->
 					<div class="video__curtain"></div>
 					<div class="container">
 						<div class="video__wrapper">
 							<div class="video__play">
-								<button class="video__play-btn">
+								<button class="video__play-btn" data-modal-vd>
 									<svg
 										width="24"
 										height="24"
@@ -280,7 +290,7 @@
 										<input type="text" name="pinfl" id="pinfl" />
 									</div>
 									<div class="form__item checkbox">
-										<input type="checkbox" name="policy" id="policy" />
+										<input type="checkbox" name="policy" id="policy" checked />
 										<label for="policy"
 											>Я ознакомлен(-на) и согласен(-а) с Правилами сайта,
 											Политикой конфиденциальности, даю согласие на обработку
@@ -588,6 +598,67 @@
 					</div>
 				</section>
 			</main>
+
+			<div class="modal modal-cb hide">
+				<div class="modal__bg">
+					<div class="modal__body">
+						<button class="modal__close">
+							<img src="./images/close_icon.svg" alt="close-modal" />
+						</button>
+						<div class="modal__content">
+							<h2 class="modal__title">Обратный звонок</h2>
+							<form class="modal__form form">
+								<div class="form__item">
+									<label for="modal-name">*Имя</label>
+									<input type="text" name="modal-name" id="modal-name" />
+								</div>
+								<div class="form__item">
+									<label for="modal-phone">*Телефон</label>
+									<div class="form__item-inner">
+										<span class="form__item-placeholder">+998</span>
+										<input type="tel" name="modal-phone" id="modal-phone" />
+									</div>
+								</div>
+								<div class="form__item checkbox">
+									<input
+										type="checkbox"
+										name="modal-policy"
+										id="modal-policy"
+										checked
+									/>
+									<label for="modal-policy"
+										>Согласие на обработку
+										<a href="#" target="_blank">персональных данных</a></label
+									>
+								</div>
+								<button class="form__btn btn">Перезвоните мне</button>
+							</form>
+						</div>
+						<div class="modal__thnks hidden">
+							<h2 class="modal__thnks-title">Спасибо!</h2>
+							<p class="modal__thnks-subtitle">Ваша заявка отправлена</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal modal-vd hide">
+				<div class="modal__bg">
+					<div class="modal__body">
+						<button class="modal__close">
+							<img src="./images/close_icon.svg" alt="close-modal" />
+						</button>
+						<div class="modal__content">
+							<iframe
+								id="youtube-iframe"
+								src="https://www.youtube.com/embed/pL1bMfIUr80?si=PXzVY0vKVjHsKumK"
+								frameborder="0"
+								allowfullscreen
+							></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
 
 			<footer class="footer">
 				<div class="container">

@@ -31,7 +31,7 @@ body {
 }
 
 .no-scroll {
-	overflow: hidden;
+	overflow-y: hidden;
 }
 
 .container {
@@ -108,3 +108,4 @@ body {
 @import './blocks/breakdown';
 @import './blocks/faq';
 @import './blocks/footer';
+@import './blocks/modal';

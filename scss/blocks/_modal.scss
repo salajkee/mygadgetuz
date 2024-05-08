@@ -1,0 +1,278 @@
+.modal {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow-y: auto;
+	z-index: 5;
+
+	&.hide {
+		// opacity: 0;
+		// visibility: hidden;
+		display: none;
+		pointer-events: none;
+	}
+
+	&.show {
+		// opacity: 1;
+		// visibility: visible;
+		display: block;
+		pointer-events: all;
+	}
+
+	&__bg {
+		width: 100%;
+		height: 100%;
+		padding: 20px 15px;
+		overflow-y: auto;
+		background: rgba(#212121, 0.8);
+		backdrop-filter: blur(6px);
+	}
+
+	&-cb {
+		.modal__body {
+			max-width: 480px;
+			margin: 0 auto;
+			padding: 62px 52px 45px;
+			position: relative;
+			background: var(--white);
+			border-radius: 5px;
+		}
+	}
+
+	&-vd {
+		.modal__body {
+			max-width: 900px;
+			margin: 0 auto;
+		}
+
+		.modal__content {
+			margin-top: 50px;
+			padding-top: 56.25%;
+			position: relative;
+
+			iframe {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+		}
+	}
+
+	&__close {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+	}
+
+	&__content {
+		display: block;
+
+		&.hidden {
+			display: none;
+		}
+	}
+
+	&__title {
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 1.6;
+		color: var(--text);
+		text-align: center;
+	}
+
+	.form {
+		max-width: 375px;
+		margin: 20px auto 0;
+
+		&__item {
+			&:not(:first-child) {
+				margin-top: 16px;
+			}
+
+			label {
+				margin-left: 10px;
+				display: block;
+				font-size: 14px;
+				color: rgba(#000000, 0.4);
+			}
+
+			input {
+				margin-top: 5px;
+				padding: 0 24px;
+				width: 100%;
+				height: 52px;
+				font-size: 16px;
+				color: var(--text);
+				border-radius: 5px;
+				border: 1px solid rgba(#000000, 0.08);
+				background-color: var(--white);
+			}
+
+			&-inner {
+				position: relative;
+
+				input {
+					padding-left: 68px;
+				}
+			}
+
+			&-placeholder {
+				position: absolute;
+				top: 22px;
+				left: 24px;
+			}
+		}
+
+		.checkbox {
+			margin-top: 25px;
+			max-width: 100%;
+			display: flex;
+			align-items: center;
+
+			input[type='checkbox'] {
+				padding: 0;
+				margin: 0;
+				width: 20px;
+				height: 20px;
+				height: 20px;
+				min-width: 20px;
+				min-height: 20px;
+				appearance: none;
+				-webkit-appearance: none;
+				border-radius: 4px;
+				border: 1px solid var(--primary);
+				cursor: pointer;
+				position: relative;
+				overflow: hidden;
+			}
+
+			input[type='checkbox']::after {
+				content: url('../images/activation/checkbox_icon.svg');
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				opacity: 0;
+				visibility: hidden;
+				transition: all 0.1s linear;
+			}
+
+			input[type='checkbox']:checked::after {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			label {
+				font-size: 14px;
+				color: var(--text);
+				user-select: none;
+
+				a {
+					color: var(--primary);
+					text-decoration: underline;
+				}
+			}
+		}
+
+		&__btn {
+			width: 100%;
+			margin-top: 25px;
+
+			@media (hover: hover) {
+				&:hover {
+					border: 1px solid var(--primary);
+				}
+			}
+
+			@media (hover: none) {
+				&:active {
+					border: 1px solid var(--primary);
+				}
+			}
+		}
+	}
+
+	&__thnks {
+		display: block;
+
+		&-title {
+			font-size: 30px;
+			font-weight: 700;
+			line-height: 1.6;
+			color: var(--text);
+			text-align: center;
+		}
+
+		&-subtitle {
+			margin-top: 15px;
+			font-size: 16px;
+			line-height: 1.6;
+			color: var(--text);
+			text-align: center;
+		}
+
+		&.hidden {
+			display: none;
+		}
+	}
+}
+
+// @media (max-width: 1024px) {
+// 	.modal {
+// 		&__body {
+// 			max-width: 730px;
+// 			padding: 70px 50px;
+// 		}
+// 	}
+// }
+
+// @media (max-width: 768px) {
+// 	.modal {
+// 		&__body {
+// 			max-width: 730px;
+// 			padding: 60px 15px;
+
+// 			&--active {
+// 				width: 345px;
+// 			}
+
+// 			@media (max-width: 375px) {
+// 				&--active {
+// 					width: 100%;
+// 				}
+// 			}
+// 		}
+
+// 		&__close {
+// 			top: 20px;
+// 			right: 20px;
+// 		}
+
+// 		&__subtitle {
+// 			margin-top: 10px;
+// 		}
+
+// 		&__thnks-title {
+// 			font-size: 24px;
+// 		}
+// 		&__thnks-subtitle {
+// 			margin-top: 10px;
+// 		}
+
+// 		&__form {
+// 			&-input,
+// 			&-select,
+// 			&-btn {
+// 				height: 55px;
+// 			}
+// 		}
+// 	}
+// }
