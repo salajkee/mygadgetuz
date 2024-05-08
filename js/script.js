@@ -72,6 +72,20 @@ try {
 	const modalClose = modal.querySelector('.modal__close');
 	const iframe = modal.querySelector('#youtube-iframe');
 
+	player = new YT.Player('player', {
+		playerVars: {
+			controls: 0,
+			showinfo: 0,
+			rel: 0,
+			autoplay: 0,
+			playsinline: 1,
+		},
+		videoId: video,
+		events: {
+			onReady: onPlayerReady,
+		},
+	});
+
 	modalTrigger.addEventListener('click', () => {
 		let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
 		document.body.classList.add('no-scroll');
@@ -85,9 +99,5 @@ try {
 		modal.classList.add('hide');
 		document.body.style.paddingRight = '0px';
 		document.body.classList.remove('no-scroll');
-		iframe.contentWindow.postMessage(
-			'{"event":"command","func":"stopVideo","args":""}',
-			'*'
-		);
 	});
 } catch (e) {}
